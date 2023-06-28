@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <title>Login Form</title>
+      <!--=============== basic  ===============-->
+      <meta charset="utf-8" />
+      <meta Http-Equiv="Cache-Control" Content="no-cache">
+      <meta Http-Equiv="Pragma" Content="no-cache">
+      <meta Http-Equiv="Expires" Content="0">
+      <meta property="og:locale" content="de_DE" />
+      <meta property="og:title" content="navigation" />
+      <meta property="og:type" content="webapp" />
+      <meta property="og:site_name" content="" />
+      <meta name="robots" content="index" />
+      <meta name="theme-color" content="#000">
+      <meta name="author" content="GSSD">
+      <meta name="Description" content="navigation" />
+      <!--=============== iOS Safari  ===============-->
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+      <!--=============== favicons ===============-->
+      <!-- <meta name="msapplication-TileImage" content="/" />
+         <link rel="icon" href="/" sizes="32x32" />
+         <link rel="icon" href="/" sizes="192x192" />
+         <link rel="manifest" href="/" crossOrigin="use-credentials" />
+      <link rel="apple-touch-icon" href="/" /> -->
+      <!--=============== css ===============-->
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+      <link rel="stylesheet" href="./assets/css/style.css" />
+      <link type="text/css" rel="stylesheet" href="./assets/css/notify.css">
+      <!--=============== JS  ===============-->
+      <script type='text/javascript' src='./assets/js/jquery/jquery-3.6.0.min.js'></script>
+      <script type='text/javascript' src='./assets/js/knockout/knockout-3.5.1.js'></script>
+      <script type='text/javascript' src='./assets/js/notify/notify.js'></script>
+
+   </head>
+
+   <body>
+      <!-- Canvas -->
+      <canvas class="orb-canvas"></canvas>
+      <!-- Overlay -->
+      <div class="overlay box">
+         <div class="square" style="--i:0;"></div>
+         <div class="square" style="--i:1;"></div>
+         <div class="square" style="--i:2;"></div>
+         <div class="square" style="--i:3;"></div>
+         <div class="square" style="--i:4;"></div>
+         <div class="square" style="--i:5;"></div>
+         <!-- Overlay inner wrapper -->
+         <div class="overlay__inner">
+            <!-- Title -->
+            <h1 class="overlay__title">
+               <span class="text-gradient">Welcome back!</span>
+            </h1>
+            <!-- Description -->
+            <p class="overlay__description">
+               <strong>Sign in to your account to continue</strong>
+            </p>
+            <div class="form">
+               <div class="inputBx">
+                  <input type="text" data-bind="value: username" required="required">
+                  <span>Login</span>
+                  <i class="fas fa-user-circle"></i>
+               </div>
+               <div class="inputBx password">
+                  <input id="password-input" data-bind="value: password" type="password" name="password"
+                     required="required">
+                  <span>Password</span>
+                  <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+                  <i class="fas fa-key"></i>
+               </div>
+               <div class="inputBx">
+                  <input type="submit" value="Log in" data-bind="click: login">
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="./assets/js/app.js"></script>
+      <script type="module" src="./assets/js/background/background.js"></script>
+   </body>
+
+</html>
